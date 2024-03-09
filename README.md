@@ -24,4 +24,32 @@ How to configure VS-Code to know which schema to use?
 First, install `YAML` extension
 ![yaml extension](./images/yaml%20extension.png)
 
-Second, configure
+Second, configure `YAML` extension settings
+![yaml extension settings](./images/yaml%20extension.png)
+
+And then go to settings.json
+
+![settings.json](./images/settings.png)
+
+In `settings.json` define `yaml.schemas`
+
+```json
+{
+  "workbench.colorTheme": "Default Dark Modern",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "explorer.confirmDragAndDrop": false,
+  "redhat.telemetry.enabled": true,
+  "yaml.format.singleQuote": true,
+  // define schema of yaml file
+  "yaml.schemas": {
+    "./schemas/schema.json": "missile-strike.yaml"
+  }
+  //
+}
+```
