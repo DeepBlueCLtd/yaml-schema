@@ -64,3 +64,5 @@ python .\validate_yaml.py [`yaml file`] [`schema json file`]
 ```shell
 python .\validate_yaml.py missile-strike.yaml ./schemas/schema.json
 ```
+
+![result](./images/result.png)
