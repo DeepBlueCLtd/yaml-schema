@@ -16,8 +16,17 @@ ownAssets:
   - asset: "ta"
     missileType: "SRBM"
     number: 2
+  - asset: "tc"
+    missileType: "MRBM"
+    number: 1
+  - asset: "pa"
+    missileType: "IRBM"
+    number: 1
 otherAssets:
   - asset: "ta"
     missileType: "Low Obs Cruise"
     number: 1
+  - asset: "ta"
+    missileType: "Jet OWA UAV"
+    number: 2
 location: "45.4215N, 75.6972W"

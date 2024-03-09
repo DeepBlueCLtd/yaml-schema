@@ -59,6 +59,7 @@
     },
     "otherAssets": {
       "type": "array",
+      "minItems": 0,
       "items": {
         "type": "object",
         "properties": {
@@ -94,6 +95,38 @@
     },
     "ownAssets": {
       "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "asset": {
+            "type": "string",
+            "enum": ["ta", "tb", "tc", "pa"],
+            "title": "Launcher"
+          },
+          "missileType": {
+            "type": "string",
+            "enum": [
+              "###Ballistic",
+              "SRBM",
+              "MRBM",
+              "IRBM",
+              "###Cruise",
+              "Standard Cruise",
+              "Low Obs Cruise",
+              "###UAV",
+              "Propellor OWA UAV",
+              "Jet OWA UAV"
+            ],
+            "title": "Missile Type"
+          },
+          "number": {
+            "type": "number",
+            "title": "Quantity"
+          }
+        },
+        "required": ["asset", "number"]
+      },
       "title": "Own Assets (Launchers)"
     },
     "requiresAirToAir": {
