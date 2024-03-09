@@ -16,3 +16,12 @@ You can see the full documentation of JSON-schema here.
 2. Create the example yaml data consulting the `schema.json` which is the result of converting original schema json - `missile-strike.schema.json`
 
 ![missilte-strike.yaml](./images/yaml.png)
+
+Specify schema in VScode.
+
+How to configure VS-Code to know which schema to use?
+
+First, install `YAML` extension
+![yaml extension](./images/yaml%20extension.png)
+
+Second, configure
