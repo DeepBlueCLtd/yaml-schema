@@ -1,0 +1,6 @@
+{
+  "yaml.schemas": {
+    "./schemas/tank.schema.json": "*.tank.yaml",
+    "./schemas/missile.schema.json": "*.missile.yaml"
+  }
+}
