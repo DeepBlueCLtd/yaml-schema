@@ -33,10 +33,13 @@ Specify schema in VScode.
 
 How to configure VS-Code to know which schema to use?
 
-First, install `YAML` extension
+First, install `YAML` extension:
+
 ![yaml extension](./images/yaml%20extension.png)
 
-Second, configure `YAML` extension settings
+Second, configure `YAML` extension settings:
+
+
 ![yaml extension settings](./images/yaml%20extension.png)
 
 And then go to settings.json (note: this can be at the user level or at the workspace level. For the latter, put the `settings.json` into a `vscode` folder in the workspace root folder.
