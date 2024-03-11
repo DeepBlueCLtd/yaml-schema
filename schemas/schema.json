@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Air--MissileStrike",
+  "type": "object",
+  "properties": {
+    "Reference": {
+      "type": "string",
+      "title": "Reference (locked)",
+      "readOnly": true
+    },
+    "actionsOn": {
+      "type": "string",
+      "title": "Actions on"
+    },
+    "activity": {
+      "type": "string",
+      "enum": ["transit", "kinetic", "asymmetric"],
+      "title": "Activity",
+      "readOnly": true
+    },
+    "activityCard": {
+      "type": "string",
+      "enum": [
+        "None",
+        "FR Cyper Op 12 - Green Drain",
+        "DE Cyper Op 14 - Brain Smash",
+        "GR Space Op 16 - Ruby Spaniel",
+        "SP Info Op 18 - Orange Drawn"
+      ],
+      "title": "Associated Cyber/Space Activity Ref#"
+    },
+    "activityDescription": {
+      "type": "string",
+      "title": "Activity Description"
+    },
+    "emconState": {
+      "type": "string",
+      "enum": [
+        "Normal Operations",
+        "Electronic Silence",
+        "Radio Silence",
+        "No restrictions"
+      ],
+      "title": "Emcon State"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date-time",
+      "title": "End Date"
+    },
+    "intent": {
+      "type": "string",
+      "title": "Intent"
+    },
+    "location": {
+      "type": "string",
+      "title": "Location",
+      "readOnly": true
+    },
+    "otherAssets": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "asset": {
+            "type": "string",
+            "enum": ["ta", "tb", "tc", "pa"],
+            "title": "Target"
+          },
+          "missileType": {
+            "type": "string",
+            "enum": [
+              "###Ballistic",
+              "SRBM",
+              "MRBM",
+              "IRBM",
+              "###Cruise",
+              "Standard Cruise",
+              "Low Obs Cruise",
+              "###UAV",
+              "Propellor OWA UAV",
+              "Jet OWA UAV"
+            ],
+            "title": "Missile Type"
+          },
+          "number": {
+            "type": "number",
+            "title": "Quantity"
+          }
+        },
+        "required": ["asset", "number"]
+      },
+      "title": "Targets"
+    },
+    "ownAssets": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "properties": {
+          "asset": {
+            "type": "string",
+            "enum": ["ta", "tb", "tc", "pa"],
+            "title": "Launcher"
+          },
+          "missileType": {
+            "type": "string",
+            "enum": [
+              "###Ballistic",
+              "SRBM",
+              "MRBM",
+              "IRBM",
+              "###Cruise",
+              "Standard Cruise",
+              "Low Obs Cruise",
+              "###UAV",
+              "Propellor OWA UAV",
+              "Jet OWA UAV"
+            ],
+            "title": "Missile Type"
+          },
+          "number": {
+            "type": "number",
+            "title": "Quantity"
+          }
+        },
+        "required": ["asset", "number"]
+      },
+      "title": "Own Assets (Launchers)"
+    },
+    "requiresAirToAir": {
+      "type": "boolean",
+      "title": "Requires Air to Air refuelling"
+    },
+    "rulesOfEngagement": {
+      "type": "string",
+      "enum": ["Weapons Free", "Weapons Tight", "Weapons Held"],
+      "title": "Rules of Engagement"
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Start Date"
+    },
+    "supports": {
+      "type": "string",
+      "title": "High-level Activity Supported"
+    },
+    "synchronisedWith": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["o-a", "o-b", "o-c", "o-d"],
+        "title": "Order"
+      },
+      "title": "Synchronised with"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 10,
+      "title": "Title"
+    }
+  },
+  "required": [
+    "Reference",
+    "title",
+    "startDate",
+    "endDate",
+    "activity",
+    "activityDescription",
+    "intent",
+    "actionsOn",
+    "synchronisedWith",
+    "supports",
+    "activityCard",
+    "rulesOfEngagement",
+    "emconState",
+    "requiresAirToAir",
+    "ownAssets",
+    "otherAssets",
+    "location"
+  ]
+}
