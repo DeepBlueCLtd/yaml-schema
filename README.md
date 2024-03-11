@@ -53,3 +53,17 @@ In `settings.json` define `yaml.schemas`
   //
 }
 ```
+
+Validate the yaml file using python
+
+1. pip install pyyaml
+2. pip install jsonschema
+
+python .\validate_yaml.py [`yaml file`] [`schema json file`]
+
+```shell
+python .\validate_yaml.py missile-strike.yaml ./schemas/schema.json
+```
+
+![result](./images/result.png)
+
