@@ -16,3 +16,9 @@ You can see the full documentation of JSON-schema here.
 2. Create the example yaml data consulting the `schema.json` which is the result of converting original schema json - `missile-strike.schema.json`
 
 ![missilte-strike.yaml](./images/yaml.png)
+
+At the begining of yaml file by adding this line, we can easily validate the yaml file against to schema.json
+
+```yaml
+# yaml-language-server: $schema=schemas\schema.json
+```
