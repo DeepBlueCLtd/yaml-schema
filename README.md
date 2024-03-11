@@ -58,7 +58,7 @@ In `settings.json` define `yaml.schemas`
   // define schema of yaml file
   "yaml.schemas": {
     "./schemas/missile.schema.json": "*.missile.yaml",
-    "./schemas/tank.schema.json": "*.missile.yaml"
+    "./schemas/tank.schema.json": "*.tank.yaml"
   }
   //
 }
