@@ -17,6 +17,13 @@ You can see the full documentation of JSON-schema here.
 
 ![missilte-strike.yaml](./images/yaml.png)
 
+At the begining of yaml file by adding this line, we can easily validate the yaml file against to schema.json
+
+```yaml
+# yaml-language-server: $schema=schemas\schema.json
+```
+
+Another way, is to specify settings.json for YAML extension
 Specify schema in VScode.
 
 How to configure VS-Code to know which schema to use?
