@@ -73,3 +73,4 @@ python .\validate_yaml.py missile-strike.yaml ./schemas/schema.json
 ```
 
 ![result](./images/result.png)
+
