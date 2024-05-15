@@ -2,7 +2,23 @@
 
 Demonstrator for schema-controlled editing of YAML documents in VS-code
 
-## 1. Create the schema
+## 1. Objective
+
+The objective of this investigation is to enable VS-Code to provide model designers with support in generating valid code, bringing these benefits:
+- quicker development through user support and fewer defects in model data-files
+- better quality (compliant) model data-files
+
+See the schema controlled data editing below:
+![screencast](./images/vs-code-yaml.gif)
+
+The adoption of Schemas for modelling data files brings these benefits:
+- simplify (reduce) validation code required with models
+- more robust data validation, handled by mature codebases
+- versioned schemas track and document chanding model APIs
+- make dat exchange with 3rd parties more robust
+- assist generation of compliant data-files, either via 3rd parties or AI
+
+## 2. Create the schema
 
 From a previous project we have this JSON schema:
 
@@ -12,7 +28,7 @@ One thing important is that some of properties like propertyOrder will be ignore
 
 The full documentation of JSON-schema is here: https://json-schema.org/
 
-## 2. Let a YAML file declare schema to use
+## 3. Let a YAML file declare schema to use
 
 Create the yaml data matching the `missile.schema.json`:
 
@@ -24,7 +40,7 @@ Adding this line to the start of the file associates it with that schema, to ass
 # yaml-language-server: $schema=schemas/schema.json
 ```
 
-## 3. Configure VS-Code to associate filename patterns with schemas.
+## 4. Configure VS-Code to associate filename patterns with schemas.
 
 Another way is to specify this association in settings.json, for the YAML extension.
 
@@ -64,7 +80,7 @@ In `settings.json` define `yaml.schemas`
 }
 ```
 
-## 4. Validate the yaml file using python
+## 5. Validate the yaml file using python
 
 1. pip install pyyaml
 2. pip install jsonschema
