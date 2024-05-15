@@ -12,10 +12,10 @@ See the schema controlled data editing below:
 ![screencast](./images/vs-code-yaml.gif)
 
 The adoption of Schemas for modelling data files brings these benefits:
-- simplify (reduce) validation code required with models
-- more robust data validation, handled by mature codebases
-- versioned schemas track and document chanding model APIs
-- make dat exchange with 3rd parties more robust
+- simplify (reduce) validation code required within models
+- more robust data validation, handled by mature libraries
+- versioned schemas track (and document) changing model APIs. For example, schema changes in a pull request can highlight new/changing data-file fields.
+- make data exchange with 3rd parties more robust
 - assist generation of compliant data-files, either via 3rd parties or AI
 
 ## 2. Create the schema
